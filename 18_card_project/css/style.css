@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* UTILITY CLASSES */ 
+
+.nowrap{
+  white-space: nowrap;
+}
+
+/* General Styles */
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-size: 1.5rem;
+  font-style: "Nunito",sans-serif;
+  min-height: 100vh;
+  background-color: #042940;
+  background-image: radial-gradient(whitesmoke,#042940);
+  display: flex;
+  flex-direction: column;
+}
+
+header,footer{
+  position: sticky;
+  background: #005C53;
+  color: #D6D58E;
+  text-align: center;
+}
+
+header{
+  top: 0;
+  text-align: center;
+}
+
+nav{
+  background-color: #042940;
+  padding: 0.5rem;
+  border: 2px solid #d6d58e72;
+  font-weight: bolder;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-decoration: none;
+}
+
+nav a,nav a:visited{
+  color: #D6D58E;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus{
+  color: #DBF227;
+}
+
+main{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+footer{
+  bottom: 0;
+  border: 2px solid #d6d58e72;
+}
+
+/* Profile card */ 
+
+.card{
+  scroll-margin-top: 8rem;
+  width: min(100%,350px);
+  background-color: #9FC131;
+  border: 2px solid white;
+  border-radius: 15px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: whitesmoke;
+}
+
+.card figure{
+  display: flex;
+  flex-direction: column;
+}
+
+.card img{
+  border: 5px double whitesmoke;
+  border-radius: 50%;
+}
+
+.card figcaption{
+  font-weight: bolder;
+  font-size: 2rem;
+  margin: 1rem;
+  text-align: center;
+  color: whitesmoke;
+}
+
+/* Small */ 
+@media screen and (min-width: 576px){
+  main{
+    justify-content: center;
+    flex-flow: row wrap;
+    padding:1rem;
+  }
+
+  .card{
+    width: min(100%,400px);
+  }
+
+  .card:last-child{
+    order: -1;
+  }
+  
+}
+
+/* Medium */ 
+@media screen and (min-width:768px){
+  nav{
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .card{
+    width: min(100%,325px);
+  }
+
+  .card figure{
+    flex-flow: column-reverse;
+  }
+
+  .card p{
+    margin-top: 1rem;
+  }
+
+}
+
+/* Large */ 
+@media screen and (min-width:992px){
+  .card{
+    width: min(100%,400px);
+  }
+
+  .card:nth-child(2){
+    order: -1;
+  }
+}
+
+/* X-Large */ 
+@media screen and (min-width:1200px){
+  .card{
+    width: min(33% - 1rem,500px);
+  }
+}
+
+/* Mobile device landscape */ 
+@media screen and (max-height:425px) and (min-aspect-ratio: 7/4){
+  h1{
+    font-size: 1.5rem;
+  }
+
+  nav{
+    display: none;
+  }
+
+  main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+  }
+
+  .card{
+    width: min(33% - 0.25rem,200px);
+  }
+
+  .card figcaption ,
+  .card p {
+    font-size: 1.25rem;
+  }
+}
+

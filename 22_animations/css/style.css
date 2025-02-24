@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 1.5rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+  background-image: linear-gradient(darkblue,purple);
+}
+
+div {
+  width: 150px;
+  height: 150px;
+  border: 1px solid whitesmoke;
+  display: grid;
+  place-content: center;
+}
+
+div:first-child{
+    border-radius: 10px 10px 0 0;
+    background-color: dodgerblue;
+    /* transform: translateX(-50%); */
+    /* transform: rotateX(180deg); */
+    /* transform: scaleX(120%); */
+    /* transform: skewX(-10deg); */
+}
+
+div:nth-child(2){
+    background-color: yellow;
+    /* transform: translateY(-2rem); */
+    /* transform: rotateY(360deg); */
+    /* transform: scaleY(120%); */
+    /* transform: skewY(-10deg); */
+}
+
+div:nth-child(3){
+    background-color: limegreen;
+    /* transform:  translate(100%,-5rem); */
+    /* transform: rotate(78deg); */
+    /* transform: scale(150%); */
+    /* transform: skew(10deg,-10deg); */
+}
+
+div:last-child{
+    height: 50px;
+    border-radius: 0 0 10px 10px;
+    background-color: palevioletred;
+}
+
+div:first-child:hover{
+    border: 4px solid dodgerblue;
+    background-color: midnightblue;
+    transform: rotate(360deg);
+    transition: all 2s 0.3s;
+}
+
+div:nth-child(2):hover{
+    border: 4px solid crimson;
+    background-color: orange;
+    transform: rotateY(180deg);
+    transition: all 2s 0.3s;
+}
+
+div:nth-child(3):hover{
+    border: 4px solid limegreen;
+    background-color: brown;
+    transform: rotate(360deg);
+    transition: all 2s 0.3s;
+}
+
+.animate{
+    animation-name: slide;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slide{
+    0%{
+        transform: translateX(0);
+    }
+
+    33%{
+        transform: translateX(300px) rotate(180deg);
+        background-color: rebeccapurple;
+        border: 4px solid palevioletred;
+        border-radius: 15px;
+    }
+
+    66%{
+        transform: translateX(-300px) rotate(-180deg);
+        border-radius: 15px;
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+}
+
+

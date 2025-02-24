@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+12&display=swap');
+
+body {
+    padding: 10%;
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: "Jacquard 12", serif;
+}
+
+/* a {
+    text-decoration: underline;
+    cursor: pointer;
+    color: blue;
+} */
+
+a {
+    color: hsl(207, 44%, 49%);
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover,
+a:focus {
+    /* color: aquamarine; */
+    opacity: 0.5;
+    background: gold;
+}
+
+a:active {
+    color: orange;
+}
